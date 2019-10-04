@@ -1,3 +1,5 @@
 module.exports = {
-  publicPath: "/portfolio/"
-};
+    publicPath: "/vuetify-router/",
+    assetsDir: "",
+    outputDir: "docs"
+  }
