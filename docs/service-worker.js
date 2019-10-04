@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/vuetify-router/precache-manifest.b0b5e87d33e5a81c15a72a9681327aaa.js"
+  "/portfolio/precache-manifest.242d8c0aa51102f69a24a2ec79aaaabb.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "vuetify-router"});
+workbox.core.setCacheNameDetails({prefix: "portfolio"});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
