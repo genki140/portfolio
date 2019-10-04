@@ -1,7 +1,5 @@
 # portfolio
 
-‚Ä‚·‚Æ
-
 [![Build Status](https://travis-ci.org/nulltemp/portfolio.svg?branch=master)](https://travis-ci.org/nulltemp/portfolio)
 
 https://nulltemp.github.io/portfolio/
