@@ -1,6 +1,6 @@
 {
-  "name": "vuetify-router",
-  "short_name": "vuetify-router",
+  "name": "portfolio",
+  "short_name": "portfolio",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
