@@ -50,7 +50,6 @@
       <v-col>
         <v-card>
           <v-card-text>
-
           </v-card-text>
         </v-card>
       </v-col>

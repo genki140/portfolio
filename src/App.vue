@@ -1,6 +1,6 @@
 
 <template>
-  <v-app id="inspire">
+  <v-app>
 
 
     <v-app-bar
@@ -21,7 +21,7 @@
     </v-app-bar>
 
     <v-content>
-      <v-container fluid>
+      <v-container fluid fill-height>
         <router-view></router-view>
       </v-container>
     </v-content>
@@ -42,16 +42,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item @click="route('profile')">
-          <v-list-item-action>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Profile</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-list-item @click="route('history')">
+        <v-list-item @click="route('archive')">
           <v-list-item-action>
             <v-icon>mdi-archive</v-icon>
           </v-list-item-action>
@@ -60,12 +51,21 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item @click="route('about')">
+        <v-list-item @click="route('vue')">
           <v-list-item-action>
-            <v-icon>mdi-contact-mail</v-icon>
+            <v-icon>mdi-vuejs</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Contact</v-list-item-title>
+            <v-list-item-title>Vue</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item @click="route('laravel')">
+          <v-list-item-action>
+            <v-icon>mdi-laravel</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Laravel</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 
@@ -79,6 +79,7 @@
       <div class="flex-grow-1"></div>
       <span class="white--text caption">Copyright &copy; 2019 Genki All Rights Reserved.</span>
     </v-footer>
+
   </v-app>
 </template>
 

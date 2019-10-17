@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import History from './views/History.vue'
-import Profile from './views/Profile.vue'
-import About from './views/About.vue'
+import Archive from './views/Archive.vue'
+import VueTest from './views/Vue.vue'
+import LaravelTest from './views/Laravel.vue'
 
 Vue.use(Router)
 
@@ -17,19 +17,19 @@ export default new Router({
       component: Home
     },
     {
-      path: '/history',
-      name: 'history',
-      component: History
+      path: '/archive',
+      name: 'archive',
+      component: Archive
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
+      path: '/vue',
+      name: 'vue',
+      component: VueTest
     },
     {
-      path: '/profile',
-      name: 'profile',
-      component: Profile
+      path: '/laravel',
+      name: 'laravel',
+      component: LaravelTest
     }
   ]
 })

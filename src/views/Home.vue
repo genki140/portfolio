@@ -1,35 +1,25 @@
 <template>
-  <div>
+  <v-layout column>
 
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title>
-            このサイトについて
-          </v-card-title>
-          <v-card-text class="text--primary">
-            <div>
-              最近のWebフロントエンド技術の勉強ついでに作成した、仕事用の自己紹介サイトです。
-            </div>
-            <div>
-              開発環境にはVSCode+Node.js+Github、ライブラリにはVue.js+Vuetify.jsを使用し、GithubPagesで公開しています。
-            </div>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+    <v-card-title>
+      <v-icon class="mr-2">mdi-home</v-icon>
+      Introduce
+    </v-card-title>
+    <v-card-text>
+      <div>
+        最近のWebフロントエンド技術の勉強ついでに作成した、仕事用の自己紹介サイトです。
+      </div>
+      <div>
+        開発環境にはVSCode+Node.js+Github、ライブラリにはVue.js+Vuetify.jsを使用し、GithubPagesで公開しています。
+      </div>
+    </v-card-text>
 
     <!--プロフィールカード-->
-    <v-card>
       <v-row no-gutters justify="center" align="center">
         <v-avatar size="300" class="ma-4">
           <v-img src="../assets/genki.png"></v-img>
         </v-avatar>
         <div>
-          <v-card-title>
-              自己紹介
-          </v-card-title>
-
           <v-card-text>
               <div>
               名前：石丸 元気
@@ -58,9 +48,9 @@
               <div>
               趣味：ピアノ、ギター、サッカー、バド、ボード、カメラ、旅行、英語
               </div>
-          </v-card-text>        </div>
+          </v-card-text>
+        </div>
       </v-row>
-    </v-card>
 
     <v-row>
       <v-col>
@@ -74,7 +64,7 @@
               <v-list-item-title>物理シミュレーションゲーム</v-list-item-title>
               <v-list-item-subtitle>C++、DirectX。3D物理計算やレンダリング計算の学習</v-list-item-subtitle>
               <v-btn @click="route('history')">
-                <v-icon>mdi-archive</v-icon>過去の作品
+                <v-icon class="mr-2">mdi-archive</v-icon>Archive
               </v-btn>
             </v-list-item-content>
           </v-list-item>
@@ -85,7 +75,7 @@
               <v-list-item-subtitle>C++、C#、HTML、CSS、JavaScript、SQL Server</v-list-item-subtitle>
               <v-list-item-subtitle>CTI/CRMパッケージでは</v-list-item-subtitle>
               <v-btn href="https://www.succ.co.jp">
-                <v-icon>mdi-open-in-new</v-icon>サクシード株式会社
+                <v-icon class="mr-2">mdi-open-in-new</v-icon>サクシード株式会社
               </v-btn>
             </v-list-item-content>
           </v-list-item>
@@ -192,7 +182,7 @@
 
     </v-row>
 
-  </div>
+  </v-layout>
 </template>
 
 <script>
@@ -200,7 +190,6 @@ import router from "@/router.js";
 
 export default {
   router: router,
-  name: 'Home',
   methods: {
     route(item) {
       router.push({
