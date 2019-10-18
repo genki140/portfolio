@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Archive from './views/Archive.vue'
 import VueTest from './views/Vue.vue'
 import LaravelTest from './views/Laravel.vue'
+import Puzzle from './views/Puzzle.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/laravel',
       name: 'laravel',
       component: LaravelTest
-    }
+    },
+    {
+      path: '/puzzle',
+      name: 'puzzle',
+      component: Puzzle
+    },
   ]
 })

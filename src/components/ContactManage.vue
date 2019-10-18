@@ -49,19 +49,6 @@
 <script>
 import contactDialog from "@/components/ContactDialog.vue";
 import confirmDialog from "@/components/ConfirmDialog.vue";
-//import Enumerable from 'linq';
-
-/*
-class Contact {
-  constructor(id, name, tel, mail, memo) {
-    this.id = id;
-    this.name = name;
-    this.tel = tel;
-    this.mail = mail;
-    this.memo = memo;
-  }
-}
-*/
 
 export default {
   components: {
@@ -70,22 +57,27 @@ export default {
   },
   methods: {
     async addItem() {
-      let d = this.$refs.contactDialog;
-      if (await d.open("新しい連絡先の作成", null)) {
-        this.contacts.push(Object.assign({},d.contact));
+      let c = await this.$refs.contactDialog.open("新しい連絡先の作成", null);
+      if (c) {
         //追加処理をここに記述します。
+        c.id = Math.max.apply(null,this.contacts.map(o=>o.id))+1;
+        this.contacts.unshift(c);
       } else {
       }
     },
+
     async deleteItem(item) {
       if (this.selected.some(v => v === item) == false) {
         this.selected = [item];
       }
 
+      //contactsに存在しないものは除外します。
+      this.selected = this.selected.filter(v=>this.contacts.some(v2=>v == v2));
+
       if (
         await this.$refs.confirmDialog.open(
           "連絡先の削除",
-          "1件の連絡先を削除します。続行しますか？"
+          `${this.selected.length}件の連絡先を削除します。続行しますか？`
         )
       ) {
         this.contacts = this.contacts.filter(
@@ -94,9 +86,9 @@ export default {
       }
     },
     async editItem(item) {
-      let d = this.$refs.contactDialog;
-      if (await d.open("連絡先の編集", item)) {
-        this.contacts.splice(this.contacts.indexOf(item),1,Object.assign({},d.contact));
+      let c = await this.$refs.contactDialog.open("連絡先の編集", item);
+      if (c) {
+        this.contacts.splice(this.contacts.indexOf(item),1,c);
       }
     }
   },
@@ -137,7 +129,7 @@ export default {
         name: "山田 三郎",
         tel: "070-4444-5555",
         mail: "s.yamada@mail.com",
-        memo: "メモメモメモメモメモメモメモメモメモメモメモメモメモ"
+        memo: "○月○日 名刺交換"
       },
       {
         id: 3,

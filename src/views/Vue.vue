@@ -7,7 +7,7 @@
       Vue Test
     </v-card-title>
     <v-card-text>
-        Vue.jsで簡易的な連絡先管理のアプリを作成してみました。全ての動作はクライアントサイドで行われます。
+        Vue.js+Vuetify.jsで簡易的な連絡先管理のアプリを作成してみました。全ての動作はクライアントサイドで行われます。
     </v-card-text>
 
     <contactManage></contactManage>

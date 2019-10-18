@@ -10,7 +10,7 @@
         最近のWebフロントエンド技術の勉強ついでに作成した、仕事用の自己紹介サイトです。
       </div>
       <div>
-        開発環境にはVSCode+Node.js+Github、ライブラリにはVue.js+Vuetify.jsを使用し、GithubPagesで公開しています。
+        開発環境にはVSCode+Node.js+GitHub、ライブラリにはVue.js+Vuetify.jsを使用し、GithubPagesで公開しています。
       </div>
     </v-card-text>
 
@@ -63,7 +63,7 @@
             <v-list-item-content>
               <v-list-item-title>物理シミュレーションゲーム</v-list-item-title>
               <v-list-item-subtitle>C++、DirectX。3D物理計算やレンダリング計算の学習</v-list-item-subtitle>
-              <v-btn @click="route('history')">
+              <v-btn @click="route('archive')">
                 <v-icon class="mr-2">mdi-archive</v-icon>Archive
               </v-btn>
             </v-list-item-content>
@@ -93,6 +93,9 @@
               <v-list-item-title>Portfolio Webサイト</v-list-item-title>
               <v-list-item-subtitle>Webフロントエンド学習</v-list-item-subtitle>
               <v-list-item-subtitle>JavaScript、Vue.js、Vuetify.js</v-list-item-subtitle>
+              <v-btn @click="route('vue')">
+                <v-icon class="mr-2">mdi-vuejs</v-icon>Vue Test
+              </v-btn>
             </v-list-item-content>
           </v-list-item>
 
