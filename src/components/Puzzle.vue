@@ -4,46 +4,33 @@
 
   <v-row no-gutters justify="center" align="center">
 
-    <v-card>
+    <v-card elevation=4>
       <v-app-bar dark color="primary">
         <v-icon class="mr-7">mdi-contacts</v-icon>
         <v-toolbar-title class="mr-10">15パズル</v-toolbar-title>
 
         <div class="flex-grow-1"></div>
-
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on }">
-            <v-btn icon v-on="on" @click="shuffle" :disabled="!completed || shuffling"><v-icon>mdi-shuffle</v-icon></v-btn>
-          </template>
-          <span>シャッフル</span>
-        </v-tooltip>
-
-        <v-tooltip bottom>
-          <template v-slot:activator="{ on }">
-            <v-btn icon v-on="on" @click="reset" :disabled="completed"><v-icon>mdi-refresh</v-icon></v-btn>
-          </template>
-          <span>リセット</span>
-        </v-tooltip>
-
+        <v-btn icon @click="shuffle" :disabled="shuffling"><v-icon>mdi-shuffle</v-icon></v-btn>
+        <v-btn icon @click="reset" :disabled="completed"><v-icon>mdi-refresh</v-icon></v-btn>
       </v-app-bar>
 
       <v-responsive :aspect-ratio="1/1">
         <div class="puzzle_base">
-          <img ref="p0" class="p11" src="../assets/puzzle/11.png" v-on:click="clickPiece( 0 ,0)" v-touch="{left:()=>clickPiece(0  ,1), right:()=>clickPiece(0  ,2), up:()=>clickPiece(0  ,3), down:()=>clickPiece(0  ,4)}"/>
-          <img ref="p1" class="p21" src="../assets/puzzle/21.png" v-on:click="clickPiece( 1 ,0)" v-touch="{left:()=>clickPiece(1  ,1), right:()=>clickPiece(1  ,2), up:()=>clickPiece(1  ,3), down:()=>clickPiece(1  ,4)}"/>
-          <img ref="p2" class="p31" src="../assets/puzzle/31.png" v-on:click="clickPiece( 2 ,0)" v-touch="{left:()=>clickPiece(2  ,1), right:()=>clickPiece(2  ,2), up:()=>clickPiece(2  ,3), down:()=>clickPiece(2  ,4)}"/>
-          <img ref="p3" class="p41" src="../assets/puzzle/41.png" v-on:click="clickPiece( 3 ,0)" v-touch="{left:()=>clickPiece(3  ,1), right:()=>clickPiece(3  ,2), up:()=>clickPiece(3  ,3), down:()=>clickPiece(3  ,4)}"/>
-          <img ref="p4" class="p12" src="../assets/puzzle/12.png" v-on:click="clickPiece( 4 ,0)" v-touch="{left:()=>clickPiece(4  ,1), right:()=>clickPiece(4  ,2), up:()=>clickPiece(4  ,3), down:()=>clickPiece(4  ,4)}"/>
-          <img ref="p5" class="p22" src="../assets/puzzle/22.png" v-on:click="clickPiece( 5 ,0)" v-touch="{left:()=>clickPiece(5  ,1), right:()=>clickPiece(5  ,2), up:()=>clickPiece(5  ,3), down:()=>clickPiece(5  ,4)}"/>
-          <img ref="p6" class="p32" src="../assets/puzzle/32.png" v-on:click="clickPiece( 6 ,0)" v-touch="{left:()=>clickPiece(6  ,1), right:()=>clickPiece(6  ,2), up:()=>clickPiece(6  ,3), down:()=>clickPiece(6  ,4)}"/>
-          <img ref="p7" class="p42" src="../assets/puzzle/42.png" v-on:click="clickPiece( 7 ,0)" v-touch="{left:()=>clickPiece(7  ,1), right:()=>clickPiece(7  ,2), up:()=>clickPiece(7  ,3), down:()=>clickPiece(7  ,4)}"/>
-          <img ref="p8" class="p13" src="../assets/puzzle/13.png" v-on:click="clickPiece( 8 ,0)" v-touch="{left:()=>clickPiece(8  ,1), right:()=>clickPiece(8  ,2), up:()=>clickPiece(8  ,3), down:()=>clickPiece(8  ,4)}"/>
-          <img ref="p9" class="p23" src="../assets/puzzle/23.png" v-on:click="clickPiece( 9 ,0)" v-touch="{left:()=>clickPiece(9  ,1), right:()=>clickPiece(9  ,2), up:()=>clickPiece(9  ,3), down:()=>clickPiece(9  ,4)}"/>
-          <img ref="p10" class="p33" src="../assets/puzzle/33.png" v-on:click="clickPiece(10,0)" v-touch="{left:()=>clickPiece(10 ,1), right:()=>clickPiece(10 ,2), up:()=>clickPiece(10 ,3), down:()=>clickPiece(10 ,4)}"/>
-          <img ref="p11" class="p43" src="../assets/puzzle/43.png" v-on:click="clickPiece(11,0)" v-touch="{left:()=>clickPiece(11 ,1), right:()=>clickPiece(11 ,2), up:()=>clickPiece(11 ,3), down:()=>clickPiece(11 ,4)}"/>
-          <img ref="p12" class="p14" src="../assets/puzzle/14.png" v-on:click="clickPiece(12,0)" v-touch="{left:()=>clickPiece(12 ,1), right:()=>clickPiece(12 ,2), up:()=>clickPiece(12 ,3), down:()=>clickPiece(12 ,4)}"/>
-          <img ref="p13" class="p24" src="../assets/puzzle/24.png" v-on:click="clickPiece(13,0)" v-touch="{left:()=>clickPiece(13 ,1), right:()=>clickPiece(13 ,2), up:()=>clickPiece(13 ,3), down:()=>clickPiece(13 ,4)}"/>
-          <img ref="p14" class="p34" src="../assets/puzzle/34.png" v-on:click="clickPiece(14,0)" v-touch="{left:()=>clickPiece(14 ,1), right:()=>clickPiece(14 ,2), up:()=>clickPiece(14 ,3), down:()=>clickPiece(14 ,4)}"/>
+          <img ref="p0" class="p11" src="../assets/puzzle/11.png" v-on:click="clickPiece( 0 ,0)"/> <!-- v-touch="{left:()=>clickPiece(0  ,1), right:()=>clickPiece(0  ,2), up:()=>clickPiece(0  ,3), down:()=>clickPiece(0  ,4)}"/> -->
+          <img ref="p1" class="p21" src="../assets/puzzle/21.png" v-on:click="clickPiece( 1 ,0)"/> <!-- v-touch="{left:()=>clickPiece(1  ,1), right:()=>clickPiece(1  ,2), up:()=>clickPiece(1  ,3), down:()=>clickPiece(1  ,4)}"/> -->
+          <img ref="p2" class="p31" src="../assets/puzzle/31.png" v-on:click="clickPiece( 2 ,0)"/> <!-- v-touch="{left:()=>clickPiece(2  ,1), right:()=>clickPiece(2  ,2), up:()=>clickPiece(2  ,3), down:()=>clickPiece(2  ,4)}"/> -->
+          <img ref="p3" class="p41" src="../assets/puzzle/41.png" v-on:click="clickPiece( 3 ,0)"/> <!-- v-touch="{left:()=>clickPiece(3  ,1), right:()=>clickPiece(3  ,2), up:()=>clickPiece(3  ,3), down:()=>clickPiece(3  ,4)}"/> -->
+          <img ref="p4" class="p12" src="../assets/puzzle/12.png" v-on:click="clickPiece( 4 ,0)"/> <!-- v-touch="{left:()=>clickPiece(4  ,1), right:()=>clickPiece(4  ,2), up:()=>clickPiece(4  ,3), down:()=>clickPiece(4  ,4)}"/> -->
+          <img ref="p5" class="p22" src="../assets/puzzle/22.png" v-on:click="clickPiece( 5 ,0)"/> <!-- v-touch="{left:()=>clickPiece(5  ,1), right:()=>clickPiece(5  ,2), up:()=>clickPiece(5  ,3), down:()=>clickPiece(5  ,4)}"/> -->
+          <img ref="p6" class="p32" src="../assets/puzzle/32.png" v-on:click="clickPiece( 6 ,0)"/> <!-- v-touch="{left:()=>clickPiece(6  ,1), right:()=>clickPiece(6  ,2), up:()=>clickPiece(6  ,3), down:()=>clickPiece(6  ,4)}"/> -->
+          <img ref="p7" class="p42" src="../assets/puzzle/42.png" v-on:click="clickPiece( 7 ,0)"/> <!-- v-touch="{left:()=>clickPiece(7  ,1), right:()=>clickPiece(7  ,2), up:()=>clickPiece(7  ,3), down:()=>clickPiece(7  ,4)}"/> -->
+          <img ref="p8" class="p13" src="../assets/puzzle/13.png" v-on:click="clickPiece( 8 ,0)"/> <!-- v-touch="{left:()=>clickPiece(8  ,1), right:()=>clickPiece(8  ,2), up:()=>clickPiece(8  ,3), down:()=>clickPiece(8  ,4)}"/> -->
+          <img ref="p9" class="p23" src="../assets/puzzle/23.png" v-on:click="clickPiece( 9 ,0)"/> <!-- v-touch="{left:()=>clickPiece(9  ,1), right:()=>clickPiece(9  ,2), up:()=>clickPiece(9  ,3), down:()=>clickPiece(9  ,4)}"/> -->
+          <img ref="p10" class="p33" src="../assets/puzzle/33.png" v-on:click="clickPiece(10,0)"/> <!-- v-touch="{left:()=>clickPiece(10 ,1), right:()=>clickPiece(10 ,2), up:()=>clickPiece(10 ,3), down:()=>clickPiece(10 ,4)}"/> -->
+          <img ref="p11" class="p43" src="../assets/puzzle/43.png" v-on:click="clickPiece(11,0)"/> <!-- v-touch="{left:()=>clickPiece(11 ,1), right:()=>clickPiece(11 ,2), up:()=>clickPiece(11 ,3), down:()=>clickPiece(11 ,4)}"/> -->
+          <img ref="p12" class="p14" src="../assets/puzzle/14.png" v-on:click="clickPiece(12,0)"/> <!-- v-touch="{left:()=>clickPiece(12 ,1), right:()=>clickPiece(12 ,2), up:()=>clickPiece(12 ,3), down:()=>clickPiece(12 ,4)}"/> -->
+          <img ref="p13" class="p24" src="../assets/puzzle/24.png" v-on:click="clickPiece(13,0)"/> <!-- v-touch="{left:()=>clickPiece(13 ,1), right:()=>clickPiece(13 ,2), up:()=>clickPiece(13 ,3), down:()=>clickPiece(13 ,4)}"/> -->
+          <img ref="p14" class="p34" src="../assets/puzzle/34.png" v-on:click="clickPiece(14,0)"/> <!-- v-touch="{left:()=>clickPiece(14 ,1), right:()=>clickPiece(14 ,2), up:()=>clickPiece(14 ,3), down:()=>clickPiece(14 ,4)}"/> -->
         </div>
       </v-responsive>
 
@@ -82,13 +69,13 @@ export default {
         let counter = 0;
         this.shuffling = true;
     
-        while(counter < 200 && this.completed == true)
+        while(counter < 300)
         {
           var random = Math.floor( Math.random() * (14 + 1) ); //0～14
           if( this.clickPiece(random,0) )
           {
             counter++;
-            await sleep(10);
+            await sleep(1);
           }
         }
         
@@ -293,6 +280,7 @@ export default {
   height:25%;
   position: absolute;
   transition: all 100ms 0s ease;
+  -webkit-transition: all 100ms 0s ease;
 }
 
 .p11

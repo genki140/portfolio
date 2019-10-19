@@ -7,7 +7,7 @@
       Css Puzzle
     </v-card-title>
     <v-card-text>
-        CSSとJavaScriptでパズルを作成中。
+        JavaScriptとCSSでパズルを作成。
     </v-card-text>
 
     <puzzle></puzzle>
