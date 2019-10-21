@@ -4,12 +4,11 @@
 
     <v-card-title>
       <v-icon class="mr-2">mdi-puzzle</v-icon>
-      Css Puzzle
+      Puzzle
     </v-card-title>
     <v-card-text>
         JavaScriptとCSSでパズルを作成。
     </v-card-text>
-
     <puzzle></puzzle>
 
   </v-layout>

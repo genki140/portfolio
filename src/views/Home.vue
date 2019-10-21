@@ -59,45 +59,63 @@
             開発実績
           </v-card-title>
 
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>物理シミュレーションゲーム</v-list-item-title>
-              <v-list-item-subtitle>C++、DirectX。3D物理計算やレンダリング計算の学習</v-list-item-subtitle>
-              <v-btn @click="route('archive')">
-                <v-icon class="mr-2">mdi-archive</v-icon>Archive
-              </v-btn>
-            </v-list-item-content>
-          </v-list-item>
+          <v-card-text>
+            <div>
+              物理シミュレーションゲーム
+            </div>
+            <v-divider></v-divider>
+            <div>
+              C++、DirectX。3D物理計算やレンダリング計算の学習
+            </div>
+            <v-btn @click="route('archive')">
+              <v-icon class="mr-2">mdi-archive</v-icon>Archive
+            </v-btn>
+          </v-card-text>
 
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>CTI/CRMパッケージ。社内業務ソフト。会社のHP</v-list-item-title>
-              <v-list-item-subtitle>C++、C#、HTML、CSS、JavaScript、SQL Server</v-list-item-subtitle>
-              <v-list-item-subtitle>CTI/CRMパッケージでは</v-list-item-subtitle>
-              <v-btn href="https://www.succ.co.jp">
-                <v-icon class="mr-2">mdi-open-in-new</v-icon>サクシード株式会社
-              </v-btn>
-            </v-list-item-content>
-          </v-list-item>
+          <v-card-text>
+            <div>
+              CTI/CRMパッケージ。社内業務ソフト。会社のHP
+            </div>
+            <v-divider></v-divider>
+            <div>
+              C++、C#、HTML、CSS、JavaScript、SQL Server
+            </div>
+            <v-btn href="https://www.succ.co.jp">
+              <v-icon class="mr-2">mdi-open-in-new</v-icon>サクシード株式会社
+            </v-btn>
+          </v-card-text>
 
-          <v-list-item three-line>
-            <v-list-item-content>
-              <v-list-item-title>Wordのアドイン</v-list-item-title>
-              <v-list-item-subtitle>スタイル情報のCSV入出力</v-list-item-subtitle>
-              <v-list-item-subtitle>C#、VSTO</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
+          <v-card-text>
+            <div>
+              Wordのアドイン
+            </div>
+            <v-divider></v-divider>
+            <div>
+              スタイル情報のCSV入出力
+            </div>
+            <div>
+              C#、VSTO
+            </div>
+          </v-card-text>
 
-          <v-list-item three-line>
-            <v-list-item-content>
-              <v-list-item-title>Portfolio Webサイト</v-list-item-title>
-              <v-list-item-subtitle>Webフロントエンド学習</v-list-item-subtitle>
-              <v-list-item-subtitle>JavaScript、Vue.js、Vuetify.js</v-list-item-subtitle>
-              <v-btn @click="route('vue')">
-                <v-icon class="mr-2">mdi-vuejs</v-icon>Vue Test
-              </v-btn>
-            </v-list-item-content>
-          </v-list-item>
+          <v-card-text>
+            <div>
+              Portfolio Webサイト
+            </div>
+            <v-divider></v-divider>
+            <div>
+              Webフロントエンド学習
+            </div>
+            <div>
+              JavaScript、Vue.js、Vuetify.js
+            </div>
+            <v-btn @click="route('vue')">
+              <v-icon class="mr-2">mdi-vuejs</v-icon>Vue Test
+            </v-btn>
+            <v-btn @click="route('puzzle')" class="ml-3">
+              <v-icon class="mr-2">mdi-puzzle</v-icon>Puzzle
+            </v-btn>
+          </v-card-text>
 
         </v-card>
       </v-col>
@@ -112,6 +130,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title>言語</v-list-item-title>
+              <v-divider></v-divider>
               <div>
                 <v-chip class="ma-1">C++<v-avatar right class="blue darken-2">10</v-avatar></v-chip>
                 <v-chip class="ma-1">C#<v-avatar right class="blue darken-2">10</v-avatar></v-chip>
@@ -124,10 +143,10 @@
               </div>
             </v-list-item-content>
           </v-list-item>
-
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title>ライブラリ</v-list-item-title>
+              <v-divider></v-divider>
               <v-list-item-subtitle>C++</v-list-item-subtitle>
               <div>
                 <v-chip class="ma-1">DirectX<v-avatar right class="blue darken-2">8</v-avatar></v-chip>
@@ -161,6 +180,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title>DB系</v-list-item-title>
+              <v-divider></v-divider>
               <div>
                 <v-chip class="ma-1">SQL Server<v-avatar right class="blue darken-1">5</v-avatar></v-chip>
                 <v-chip class="ma-1">MS-Access<v-avatar right class="blue lighten-1">2</v-avatar></v-chip>
@@ -170,6 +190,7 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title>プラットフォーム / ソフト等</v-list-item-title>
+              <v-divider></v-divider>
               <div>
                 <v-chip class="ma-1">Visual Studio<v-avatar right class="blue darken-2">10</v-avatar></v-chip>
                 <v-chip class="ma-1">GitHub<v-avatar right class="blue darken-2">3</v-avatar></v-chip>

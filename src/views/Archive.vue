@@ -41,13 +41,13 @@
                     Released: 2007
                   </v-col>
                   <v-col cols="auto">
-                    <v-btn
-                      href="https://forest.watch.impress.co.jp/article/2008/01/18/ballers.html"
-                    >
-                      <v-icon>mdi-open-in-new</v-icon>紹介サイト
-                    </v-btn>
-                  </v-col>
-                  <v-col cols="auto">
+                    <div>
+                      <v-btn
+                        href="https://forest.watch.impress.co.jp/article/2008/01/18/ballers.html"
+                      >
+                        <v-icon>mdi-open-in-new</v-icon>紹介サイト
+                      </v-btn>
+                    </div>
                     <v-btn href="https://www.freem.ne.jp/win/game/1540">
                       <v-icon>mdi-download</v-icon>ダウンロード
                     </v-btn>

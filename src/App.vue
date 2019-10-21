@@ -2,7 +2,6 @@
 <template>
   <v-app>
 
-
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
