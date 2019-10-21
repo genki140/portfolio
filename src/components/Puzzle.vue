@@ -69,13 +69,13 @@ export default {
         let counter = 0;
         this.shuffling = true;
     
-        while(counter < 300)
+        while(counter < 100)
         {
           var random = Math.floor( Math.random() * (14 + 1) ); //0～14
           if( this.clickPiece(random,0) )
           {
             counter++;
-            await sleep(1);
+            await sleep(20);
           }
         }
         

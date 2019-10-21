@@ -62,8 +62,9 @@ export default {
         //追加処理をここに記述します。
         c.id = Math.max.apply(null,this.contacts.map(o=>o.id))+1;
         this.contacts.unshift(c);
-      } else {
       }
+      // else {
+      //}
     },
 
     async deleteItem(item) {
@@ -93,11 +94,11 @@ export default {
     }
   },
 
-  watch: {
-    selected: function(newValue, oldValue) {
-      //this.isSelected = this.selected.length >= 1;
-    }
-  },
+  //watch: {
+  //  selected: function(newValue, oldValue) {
+  //    //this.isSelected = this.selected.length >= 1;
+  //  }
+  //},
 
   data: () => ({
     search: "",
