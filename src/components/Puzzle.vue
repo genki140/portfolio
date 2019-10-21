@@ -11,7 +11,7 @@
 
         <div class="flex-grow-1"></div>
         <v-btn icon @click="shuffle" :disabled="shuffling"><v-icon>mdi-shuffle</v-icon></v-btn>
-        <v-btn icon @click="reset" :disabled="completed"><v-icon>mdi-refresh</v-icon></v-btn>
+        <v-btn icon @click="reset" :disabled="completed || shuffling"><v-icon>mdi-refresh</v-icon></v-btn>
       </v-app-bar>
 
       <v-responsive :aspect-ratio="1/1">

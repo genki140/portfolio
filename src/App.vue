@@ -60,21 +60,21 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item @click="route('laravel')">
-          <v-list-item-action>
-            <v-icon>mdi-laravel</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Laravel</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
         <v-list-item @click="route('puzzle')">
           <v-list-item-action>
             <v-icon>mdi-puzzle</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Puzzle</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item @click="route('laravel')">
+          <v-list-item-action>
+            <v-icon>mdi-laravel</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Laravel</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 
